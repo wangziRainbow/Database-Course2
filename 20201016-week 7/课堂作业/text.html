@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>News</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.15.5/css/ui.jqgrid.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.15.5/jquery.jqgrid.min.js"></script>
+    <script>
+    //<![CDATA[
+    $(function () {
+        "use strict";
+        $("#grid").jqGrid({
+            colModel: [
+				{ name: "ID",width:75},
+                { name: "TT", width:500},
+                { name: "ST", width:500}
+            ],
+            data: [
+                { id: 1, ID:"1",
+						 TT: "The International Monetary Fund on Tuesday turned slightly more positive on the global economy for this year, but warned of a ‘long, uneven and uncertain’ recovery.", 
+				          ST: "国际货币基金组织10月13日发布报告，对今年全球经济的预期略有上调，但警告称，全球经济复苏将是“漫长、坎坷而不确定的”。" },
+                { id: 2, ID:"2",
+					     TT: "The global economy is now projected to contract by 4.4% in 2020 — an upward revision from an estimate of -4.9% made in June (which has now also been revised to -5.2% due to a new methodology used by the IMF). ", 
+				          ST: "根据国际货币基金组织的预测，全球经济在2020年将萎缩4.4%，高于6月份下降4.9%的预测（由于国际货币基金组织采用新方法，该数据被修正为下降5.2%)。" },
+                { id: 3, ID:"3",
+					     TT: "The IMF's forecast assumes that social distancing due to the coronavirus pandemic will continue into 2021, and that local transmission will fall everywhere by the end of 2022.", 
+				          ST: "国际货币基金组织的预测认为，新冠疫情造成的社交隔离措施将持续到2021年，到2022年年底，全球各地的社区传播都将减少。" },
+                { id: 4, ID:"4",
+					     TT: "Among major economies, only China is expected to expand in 2020. ", 
+				          ST: "在主要经济体中，只有中国有望在2020年实现经济增长。" },
+                { id: 5, ID:"5",
+					     TT: "The IMF believes the country, which battled Covid-19 earlier than the rest of the world and was quickly able to move out of lockdown due to strict containment measures, will grow by 1.9%.", 
+				          ST: "国际货币基金组织预计今年中国经济增长将达到1.9%。中国比世界其他国家更早抗击新冠肺炎疫情，由于采取了严格的管控措施，迅速走出了封锁状态。" }
+            ]
+        });
+    });
+    //]]>
+    </script>
+</head>
+<body>
+<table id="grid"></table>
+</body>
+</html>
